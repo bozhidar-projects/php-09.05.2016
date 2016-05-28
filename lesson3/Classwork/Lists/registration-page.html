@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PHP Masters Registration Form</title>
+</head>
+<body>
+	<form action="register.html" method="get">
+		<fieldset>
+			<legend>Registration</legend>
+			<label for="form-email">E-mail:</label>
+			<input id="form-email" type="email" name="email" placeholder="someone@domain.com"><br>
+		</fieldset>
+
+		<fieldset>
+			<legend>Personal Data:</legend>
+			<label for="form-password">Password:</label>
+			<input id="form-password"type="password"><br>
+
+			<label for="form-firstname">Firstname:</label>
+			<input id="form-firstname" type="text" name="firstname"><br>
+
+			<label for="form-lastname">Lastname:</label>
+			<input id="form-lastname" type="text" name="lastname"><br>
+
+			<label for="form-gender-female">Female</label>
+			<input id="form-gender-female" name="gender" type="radio" value="female">
+			<label for="form-gender-male">Male</label>
+			<input id="form-gender-male" name="gender" type="radio" value="male"><br>
+
+			<label for="form-tel">Phone:</label>
+			<input id="form-tel" type="tel"><br>
+
+			<label for="form-date">Date of Birth:</label>
+			<input id="form-date" type="date"><br>
+
+			<label for="form-country">Country:</label>
+			<select id="form-country">
+				<optgroup label="Europe">
+					<option>Bulgaria</option>
+					<option>England</option>
+				</optgroup>
+				<optgroup label="North America">
+					<option>Canada</option>
+					<option>The USA</option>
+				</optgroup>
+			</select><br>
+
+			<label for="form-education">Higher Education Finished:</label>
+			<input id="form-education" list="education-institutions"></input>
+			<datalist id="education-institutions">
+				<option>Technical University of Sofia</option>
+				<option>University of Sofia</option>
+				<option>UNSS</option>
+			</datalist>
+		</fieldset>
+
+
+		<fieldset>
+			<legend>Interests</legend>
+			<label for="is-interested-in-travel">Are you interested in travelling ?</label>
+			<input id="is-interested-in-travel" type="checkbox"><br>
+
+			<label for="is-interested-in-sport">Are you interested in sports ?</label>
+			<input id="is-interested-in-sport" type="checkbox"><br>
+
+			<label for="is-interested-in-makup">Are you interested in makeups ?</label>
+			<input id="is-interested-in-makup" type="checkbox"><br>
+
+			<label for="form-favourite-color">What's your favourite color:</label>
+			<input id="form-favourite-color" type="color"><br>
+
+			<label for="form-favourite-number">Favourite Number:</label>
+			<input id="form-favourite-number" type="number"><br>
+
+			<label for="form-favourite-grade">Grade in Elementary School:</label>
+			<input id="form-favourite-grade" type="range" min="2" max="6"><br>
+
+			<label for="form-file-upload">Upload Avatar</label>
+			<input id="form-file-upload" type="file"><br>
+
+			<input type="hidden" value="This is My Secret Message" name="secret">
+
+			<label for="form-about">Say something about you:</label>
+			<textarea id="form-about" rows="10" cols="50" ></textarea><br>
+		</fieldset>
+
+		<button type="submit">Submit</button>
+		<button type="reset">Reset</button>
+		<button type="button" onclick="alert('Hello from my button')">Just for Fun</button>
+	</form>
+</body>
+</html>

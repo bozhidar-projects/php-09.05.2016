@@ -1,0 +1,62 @@
+body {
+	font-family: "Courier", "November", "Monospace";
+}
+
+/* Section Formatting */
+section {
+	color: green;
+}
+
+h2 {
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: red;  
+	border-bottom: 4px solid black;
+	font-size: 1.5em; 
+	background-color: pink; 
+	color: rgb(255, 255, 0);
+	padding: 10px 15px;
+	margin: 30px;
+	width: 450px;
+}
+
+p.first-element {
+	color: red;
+}
+
+li.first-element {
+	color: rgba(255,128,128, 1.0);
+}
+
+nav, #sport-section-header{
+	background-color: #47a351;
+	color: white;
+}
+
+span {
+	border: 2px solid green;
+}
+
+section>header {
+	font-size: 3em;
+}
+
+.big-text {
+	font-size: 1.5em;
+}
+
+.small-text {
+	font-size: 0.75em;
+}
+
+.green-text {
+	color: green;
+}
+
+.black-text {
+	color: black;
+}
+
+.blue-text {
+	color: blue;
+}

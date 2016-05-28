@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PHP Masters Registration Page</title>
+</head>
+<body>
+	<form action="register.html" method="get">
+		<fieldset>
+			<legend>Registration:</legend>
+			<input name="lastname" type="text"><br>
+			<input name="email" type="email"><br>
+			<input name="password" type="password"><br>
+		</fieldset>
+
+		<fieldset>
+			<legend>Personal information:</legend>
+			<label for="firstname">Firstname</label>
+			<input id="firstname" name="firstname" type="text"><br>
+			<input name="phone" type="tel"><br>
+			<input name="gender" type="radio" value="male">Male
+			<input name="gender" type="radio" value="female">Female<br>
+			<input name="birthday" type="date"><br>
+			<input name="years" type="number"><br>
+			<input name="avarage-grade" type="range" min="2" max="6"><br>
+			<input name="like-sports" type="checkbox">Do you like sports?<br>
+			<input name="like-travel" type="checkbox">Do you like to travel?<br>
+			<input name="like-makeup" type="checkbox">Do you like to makeup?<br>
+			<input name="secren" type="hidden" value="NoOneCanSeeMe">
+			<input name="favourite-color" type="color"><br>
+
+			<label for="aboutYou">Something about you:</label>
+			<textarea id="aboutYou" name="aboutYou"></textarea><br>
+
+			<select id="country" name="country">
+				<optgroup label="Europe">
+					<option>England</option>
+					<option>Bulgaria</option>
+				</optgroup>
+				<optgroup label="North America">
+					<option>Canada</option>
+					<option>The USA</option>
+				</optgroup>
+			</select><br>
+
+			<input id="university" name="university" list="universities">
+
+			<datalist id="universities">
+				<option value="University of Sofia">
+				<option value="Technical University">
+			</datalist>
+		</fieldset>
+
+		<button type="Submit">Submit Form</button>
+		<button type="Reset">Reset Form</button>
+		<button type="Button">Just for Fun</button>
+	</form>
+</body>
+</html>
