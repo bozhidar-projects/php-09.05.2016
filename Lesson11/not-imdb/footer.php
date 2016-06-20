@@ -1,3 +1,5 @@
+	</section>
+</main>
 <footer>
 		<section id="copyright-notice">
 			Copyright "Not IMDB"
