@@ -1,0 +1,45 @@
+#logo {
+	width: 200px;
+	height: 190px;
+	display: inline-block;
+}
+
+#site-header{
+	background-color: grey;
+}
+
+#site-header>h1 {
+	display: inline-block;
+	margin: 0px 0px 0px 2em;
+	font-size: 5em;
+}
+
+main {
+	background-color: teal; 
+	display: inline-block;
+	width: 84%;
+}
+
+#content {
+
+}
+
+#left-sidebar {
+	background-color: green;
+	display: inline-block;
+	width: 15%;
+}
+
+body>footer {
+	background-color: blue;
+}
+
+#copyright-notice {
+	background-color: red;
+	display: inline-block;
+}
+
+#address {
+	background-color: yellow;
+	display: inline-block;
+}
