@@ -1,6 +1,7 @@
 <?php
 	include("header.php");
-	include("left-sidebar.php");	
+	include("left-sidebar.php");
+	include("records-list.php");	
 ?>
 <form class="add-form" action="add-record-service.php" method="post">
 	<label for="firstname">Firstname:</label>

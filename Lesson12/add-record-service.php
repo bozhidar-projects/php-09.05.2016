@@ -18,8 +18,8 @@
 		$csv_string = implode(",", $member);
 		$file = fopen("database.csv", "a");
 		fwrite($file, "\n".$csv_string);
-		
 		fclose($file);
 
+		header("Location: index.php");
 	}
 ?>
