@@ -12,8 +12,8 @@
 			}
 		}
 
-		$file = fopen("database.csv", "w");
-		fwrite($file, $column_string);
+		$file = fopen("members.csv", "w");
+		fwrite($file, $column_string."\n");
 
 		for ($i = 0; $i < count($new_members)-1; $i++) {
 			$member_csv = implode(",", $new_members[$i]);
@@ -26,6 +26,6 @@
 
 		fclose($file);
 
-		header("Location: index.php");
+		header("Location: remove-record.php");
 	} 
 ?>

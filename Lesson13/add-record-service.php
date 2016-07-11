@@ -16,10 +16,10 @@
 		array_push($members, $member);
 
 		$csv_string = implode(",", $member);
-		$file = fopen("database.csv", "a");
+		$file = fopen("members.csv", "a");
 		fwrite($file, "\n".$csv_string);
 		fclose($file);
 
-		header("Location: index.php");
+		header("Location: add-records.php");
 	}
 ?>

@@ -10,6 +10,6 @@
 </head>
 <body>
 <header>
-	<span>Logged as <span><?php $_SESSION['user']['username']?></span></span>
+	<span>Logged as <span><?php echo $_SESSION['user']['username']?></span></span>
 	<form id="logout-form" action="logout.php" method="post"><button type="submit">Logout</button></form>
 </header>

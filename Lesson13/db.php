@@ -19,8 +19,8 @@
 	$file = fopen("users.csv", "r");
 	$users = array();
 
-	$column_string = trim(fgets($file));
-	$column_names2 = explode(",", $column_string);
+	$column_string2 = trim(fgets($file));
+	$column_names2 = explode(",", $column_string2);
 	while (!feof($file)) {
 		$current_line = trim(fgets($file));
 		$elements = explode(",", $current_line);
