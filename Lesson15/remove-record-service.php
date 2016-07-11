@@ -8,6 +8,6 @@
 			remove_record("members.csv", $value);
 		}
 
-		header("Location: home.php");
+		header("Location: home.php?page=members");
 	} 
 ?>

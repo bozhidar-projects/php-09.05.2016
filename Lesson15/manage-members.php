@@ -3,5 +3,5 @@
 
 	print_table($column_names, $members);
 	print_add_form($column_names, "add-record-service.php");
-	include("remove-record.php");
+	remove_record_form("remove-record-service.php");
 ?>

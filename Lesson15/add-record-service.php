@@ -16,6 +16,6 @@
 		array_push($members, $member);
 		add_record("members.csv", $member);
 		
-		header("Location: add-records.php");
+		header("Location: home.php?page=members");
 	}
 ?>
