@@ -33,19 +33,15 @@
 		$column_names = $data["columns"];
 		$records = $data["data"];
 		unset($records[$record_index]);
-
+		print_r($records);
 		$file = fopen($file_name, "w");
 		$column_string = implode(",", $column_names);
-		fwrite($file, $column_string."\n");
+		fwrite($file, $column_string);
 
-		for ($i = 0; $i < count($records)-1; $i++) {
-			$record_csv = implode(",", $records[$i]);
-			$record_csv .= "\n";
-			fwrite($file, $record_csv);
+		foreach ($records as $record) {
+			$record_csv = implode(",", $record);
+			fwrite($file, "\n".$record_csv);
 		}
-
-		$record_csv = implode(",", $records[$i]);
-		fwrite($file, $record_csv);
 
 		fclose($file);
 	}
