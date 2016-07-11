@@ -5,15 +5,17 @@
 	$username = isset($_POST["username"]) ? $_POST["username"]: '';
 	$password = isset($_POST["password"]) ? $_POST["password"]: ''; 
 
-	$is_valid_user = false;
-	foreach ($users as $user) {
-		if ($user['username'] == $username && $user['password'] == $password) {
-			$is_valid_user = true;
-			break;
+	function is_valid_user($username, $password, $users) {
+		foreach ($users as $user) {
+			if ($user['username'] == $username && $user['password'] == $password) {
+				return true;
+			}
 		}
+
+		return false;
 	}
 
-	if ($is_valid_user) {
+	if (is_valid_user($username, $password, $users)) {
 		$_SESSION['user'] = array(
 				'username' => $username,
 				'password' => $password

@@ -1,8 +1,3 @@
-<?php
-	include("header.php");
-	include("left-sidebar.php");
-	include("records-list.php");	
-?>
 <form class="add-form" action="add-record-service.php" method="post">
 	<label for="firstname">Firstname:</label>
 	<input id="firstname" name="Firstname" type="text"></input><br>
@@ -15,7 +10,4 @@
 	<label for="phone">Phone:</label>
 	<input id="phone" name="Phone" type="text"></input><br>
 	<button type="submit">Add</button>
-</form>
-<?php
-	include("footer.php");
-?>	
+</form>	

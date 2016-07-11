@@ -1,6 +1,6 @@
 <?php
 include("header.php");
 include("left-sidebar.php");
-include("records-list.php");
+include("manage-members.php");
 include("footer.php");
 ?>

@@ -1,6 +1,7 @@
 <?php 
 	require_once("authentication.php");
-	require_once("db.php"); 
+	require_once("db.php");
+	require_once("functions.php"); 
 ?>
 <!DOCTYPE html>
 <html>
