@@ -34,7 +34,22 @@
 		return $result;
 	}
 
-	function get_users($sql) {
+	function get_members() {
+		$sql = "SELECT 	`Members`.`ID`, 
+						`Firstname`, 
+        				`Lastname`, 
+       					`Age`,
+						`Universities`.`Name` as `University`,
+        				`Phone`
+				from `Members` 
+				join `Universities`
+				on `Members`.`University_ID` = `Universities`.`ID`";
+
+		$result = get_data_from_database($sql);
+		return $result;		
+	}
+
+	function get_users() {
 		$sql = "SELECT * FROM `Users`";
 
 		$result = get_data_from_database($sql);
@@ -63,6 +78,32 @@
 		return $result;
 	}
 
+	function execute_sql_query($sql) {
+		global $database_connection;
+		$database_connection->query($sql);
+
+		if ($database_connection->error) {
+			die("Error in executing query: " . $sql . $database_connection->error);
+		}
+	}
+
+	function add_user($username, $password, $id = NULL) {
+		if ($id == NULL || $id == "") {
+			$sql = "INSERT INTO `Users`(`username`, `password`) 
+					VALUES ('" . $username . "','" . $password . "')";
+		} else {
+			$sql = "INSERT INTO `Users` VALUES (" . $id . ",'" . $username . "','" . $password . "')" ;
+		}
+
+		execute_sql_query($sql);
+	}
+
+	function delete_user_by_id($id) {
+		$sql = "DELETE FROM `Users` WHERE `ID` = " . $id;
+
+		execute_sql_query($sql);
+	}
+
 	function add_record($file_name, $record) {
 		$csv_string = implode(",", $record);
 		$file = fopen($file_name, "a");
@@ -88,11 +129,11 @@
 		fclose($file);
 	}
 
-	$members_data = get_data("members.csv");
+	$members_data = get_members();
 	$members = $members_data["data"];
 	$column_names = $members_data["columns"];
 
-	$users_data = get_data("users.csv");
+	$users_data = get_users();
 	$users = $users_data["data"];
 	$column_names2 = $users_data["columns"];
 ?>

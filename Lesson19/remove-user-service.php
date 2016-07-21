@@ -3,9 +3,9 @@
 
 	if (isset($_POST["ID"])) {
 		$value = $_POST["ID"];
-		if ($value >= 0  && $value < count($users)) {
+		if ($value >= 0) {
 			unset($users[$value]);
-			remove_record("users.csv", $value);
+			delete_user_by_id($value);
 		}
 
 		header("Location: home.php?page=users");

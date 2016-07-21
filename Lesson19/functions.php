@@ -2,17 +2,14 @@
 	function print_table($column_names, $records) {
 		echo "<table>";
 		echo "<tr>";
-		echo "<th>ID</th>";
 
 		foreach ($column_names as $column_name) {
 			echo "<th>" . $column_name . "</th>";
 		}
 
 		echo "</tr>";
-		$i = 0;
 		foreach ($records as $record) {
 			echo "<tr>";
-			echo "<td>" . $i++ . "</td>";
 			foreach ($column_names as $column_name) {
 				echo "<td>" . $record[$column_name] . "</td>";
 			}
