@@ -1,9 +1,8 @@
 <?php
 	class Parrot extends Animal {
-		private $name;
 
 		public function __construct($name) {
-			$this->name = $name;
+			parent::__construct($name);
 		}
 
 		public function repeat_a_word($word) {

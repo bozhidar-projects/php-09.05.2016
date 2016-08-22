@@ -7,6 +7,10 @@
 		$animal->make_a_sound();
 	}
 
+	function pet_the_pet(Pet $pet) {
+		$pet->pet();
+	}
+
 	function poke_animals(array $animals) {
 		foreach ($animals as $animal) {
 			poke_animal($animal);
@@ -27,7 +31,7 @@
 	$parrot->repeat_a_word("biscuit");
 
 	$siamese_cat = new Siamese("Sia");
-	
+
 	echo "Poking animals... <br>";
 	poke_animal($dog);
 	poke_animal($cat);
@@ -41,4 +45,6 @@
 					 new Parrot("Coco")
 					);
 	poke_animals($animals);
+
+	pet_the_pet($dog);
 ?>

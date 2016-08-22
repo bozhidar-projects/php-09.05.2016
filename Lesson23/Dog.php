@@ -1,9 +1,8 @@
 <?php
-	class Dog extends Animal {
-		private $name;
+	abstract class Dog extends Animal implements Pet {
 
 		public function __construct($name) {
-			$this->name = $name;
+			parent::__construct($name);
 		}
 
 		public function fetch_a_stick() {
@@ -11,8 +10,11 @@
 		}
 
 		public function make_a_sound() {
-			parent::make_a_sound();
 			echo $this->name . " barks <br>";
+		}
+
+		public function pet() {
+			echo $this->name . " is happy !";
 		}
 	}
 

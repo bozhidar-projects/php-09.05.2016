@@ -1,8 +1,15 @@
 <?php
-	class Animal {
+	abstract class Animal {
+		protected $name;
 
-		public function make_a_sound() {
-			echo "The animal will make a sound: <br>";
+		public function __construct($name) {
+			$this->name = $name;
+		}
+
+		abstract public function make_a_sound();
+
+		public function get_name() {
+			return $this->name;
 		}
 	}
 

@@ -1,9 +1,8 @@
 <?php
 	class Cat extends Animal {
-		protected $name;
 
 		public function __construct($name) {
-			$this->name = $name;
+			parent::__construct($name);
 		}
 
 		public function catch_a_mouse() {
