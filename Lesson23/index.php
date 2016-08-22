@@ -26,10 +26,13 @@
 
 	$parrot->repeat_a_word("biscuit");
 
+	$siamese_cat = new Siamese("Sia");
+	
 	echo "Poking animals... <br>";
 	poke_animal($dog);
 	poke_animal($cat);
 	poke_animal($parrot);
+	poke_animal($siamese_cat);
 
 	echo "Array example: <br>";
 	$animals = array(new Dog("Vux"),
