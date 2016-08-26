@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		function calculateResult(currentEvent) {
+			var inputA = document.querySelector("#argumentA");
+			var valueA = parseInt(inputA.value);
+
+			var inputB = document.querySelector("#argumentB");
+			var valueB = parseInt(inputB.value);
+
+			var result = valueA + valueB;
+
+			var output = document.querySelector("#result");
+			output.value = result;
+		}
+	</script>
+
+	<style type="text/css">
+		#result {
+			border: 1px solid black;
+			display: block;
+			width: 171px;
+			height: 20px;
+		}
+	</style>
+
+</head>
+<body>
+	<form>
+		<input id="argumentA" type="number" /><br>
+		<input id="argumentB" type="number" /><br>
+		<output id="result" for="argumentA argumentB"></output><br>
+		<button type="button" onclick="calculateResult(event)">Calculate</button>
+	</form>
+</body>
+</html>

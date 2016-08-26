@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function redirectTo(event) {
+			console.log(window.location.href);
+			console.log(window.location.host);
+			console.log(window.location.protocol);
+			window.location = "https://google.com";
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<button type="button" onclick="redirectTo(event)">Redirect</button>
+	</form>
+</body>
+</html>

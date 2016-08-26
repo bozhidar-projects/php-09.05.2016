@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		var operandA = 0;
+		var operandB = 0;
+		var operator = undefined;
+
+		function operandClicked(event) {
+			if (operator == undefined) {
+				var buttonValue = parseInt(event.target.innerHTML);
+				operandA = operandA*10 + buttonValue;
+				document.querySelector("#result").value = operandA;
+			} else {
+				var buttonValue = parseInt(event.target.innerHTML);
+				operandB = operandB*10 + buttonValue;
+				document.querySelector("#result").value = operandB;
+			}
+		}
+
+		function operatorClicked(event) {
+			var button = event.target;
+			operator = button.innerHTML;
+			document.querySelector("#result").value = "";
+		}
+
+		function onClear(event) {
+			operandA = 0;
+			operandB = 0;
+			operator = undefined;
+			document.querySelector("#result").value = "";
+		}
+
+		function onCalculate(event) {
+			var result = undefined;
+			if (operator == "+") {
+				result = operandA + operandB;
+			}
+
+			document.querySelector("#result").value = result;
+		}
+	</script>
+
+</head>
+<body>
+	<form>
+		<output id="result"></output><br>
+		<button class="operand" type="button" 
+			onclick="operandClicked(event)">1</button>
+		<button class="operand" type="button" 
+			onclick="operandClicked(event)">2</button>
+		<button class="operand" type="button" 
+			onclick="operandClicked(event)">3</button><br>
+		<button class="operand" type="button" 
+			onclick="operandClicked(event)">4</button>
+		<button class="operand" type="button" 
+			onclick="operandClicked(event)">5</button>
+		<button class="operand" type="button" 
+			onclick="operandClicked(event)">6</button><br>
+		<button class="operand" type="button" 
+			onclick="operandClicked(event)">7</button>
+		<button class="operand" type="button" 
+			onclick="operandClicked(event)">8</button>
+		<button class="operand" type="button" 
+			onclick="operandClicked(event)">9</button><br>
+		<button class="operand" type="button" 
+			onclick="operandClicked(event)">0</button>
+		<button class="operator" type="button" onclick="operatorClicked(event)">+</button>
+		<button id="clear" type="button"  onclick="onClear(event)">C</button>
+		<button id="calculate" type="button" onclick="onCalculate(event)">=</button>
+	</form>
+
+</body>
+</html>

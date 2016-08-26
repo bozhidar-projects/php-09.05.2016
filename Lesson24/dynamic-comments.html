@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function addComment(currentEvent) {
+			var text = document.querySelector("#commentToAdd").value;
+
+			var pTag = document.createElement("p");
+			pTag.innerHTML = text;
+
+			var commentsContainer = document.querySelector("#commentsContainer");
+			commentsContainer.appendChild(pTag);
+
+			document.querySelector("#commentToAdd").value = "";
+		}
+	</script>
+</head>
+<body>
+
+	<div id="commentsContainer">
+
+	</div>
+
+	<form>
+		<textarea id="commentToAdd"></textarea><br>
+		<button type="button" 
+				onclick="addComment(event)">
+			Comment
+		</button>
+	</form>
+</body>
+</html>

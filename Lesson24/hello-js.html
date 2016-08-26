@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">		
+		//document.write("Hello, World");
+		//alert("Hello, World");
+		console.log("Hello, World");
+
+		var myVariable = 5;
+		var firstname = "Ivan";
+		var lastname = 'Ivanov';
+
+		console.log(myVariable);
+		console.log(firstname);
+		console.log(lastname);
+		/*
+			this is multi line 
+			comment
+		*/
+		var fullname = firstname + " " + lastname; 
+		console.log(fullname);
+
+		var x = 10;
+		var y = x * 3;
+
+		var z = 10 % 3;
+		console.log(z);
+
+		var someString = "5";
+		var intVariable = 5;
+
+		console.log(someString + intVariable);
+
+		var isTrue = true;
+
+		var result = isTrue && false;
+		console.log(result);
+
+		if (true) {
+			console.log("The expression is true");
+		} else {
+			console.log("The expression is false");
+		}
+
+		for (var i = 0; i < 10; i++) {
+			console.log(i);
+		}
+
+		var j = 10;
+		while (j >= 0) {
+			console.log(j);
+			j--;
+		}
+
+		var shouldContinue = false;
+		do {
+			console.log("Inside do while");
+		} while (shouldContinue);
+
+		var someArray = [1, 2, 5, 10, 15];
+		var a = [];
+		console.log(someArray[2]);
+
+		for (var i = 0; i < someArray.length; i++) {
+			console.log(someArray[i]);
+		}
+
+		function testFunction(a, b) {
+			return a+b;
+		}
+
+		var additionResult = testFunction(10, 5);
+		
+		console.log("Result is: " + (11 + 12));
+
+		var strVar = "5";
+		var intVar = 5;
+
+		console.log(parseInt(strVar)+intVar);
+
+		class Person {
+			constructor(firstname, lastname) {
+				this.firstname = firstname;
+				this.lastname = lastname;
+			}
+
+			getName() {
+				return this.firstname + " " + this.lastname;
+			}
+		}
+
+		var person = new Person("Ivan", "Ivanov");
+		console.log(person.getName());
+		console.log(person.firstname);
+
+		var person2 = {
+			firstname: "Ivan",
+			lastname: "Ivanov",
+			address: {
+				city: "Sofia",
+				street: "Opylchenska"
+			}
+		}
+
+		console.log(person2);
+		console.log(person2.firstname + 
+			" " + 
+			person2.lastname)
+		console.log(person2.address.city);
+
+		function Person3(firstname, lastname) {
+			this.firstname = firstname;
+			this.lastname = lastname;
+		}
+
+		var person3 = new Person3("Ivan", "Ivanov");
+		console.log(person3.firstname + 
+					" " +
+					person3.lastname);
+	</script>
+</head>
+<body>
+	<p>
+		Something;
+	</p>
+</body>
+</html>
